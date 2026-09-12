@@ -4,10 +4,10 @@
 
 ## Thông tin cá nhân
 
-- Họ và tên:
-- Mã học viên:
-- Vai trò / bối cảnh (VD: sinh viên năm X, intern PM, ...):
-- Công việc hằng tuần (3-5 gạch đầu dòng để soi problem):
+- Họ và tên: Đào Ngọc Bình Thiên
+- Mã học viên: 2A202602814
+- Vai trò / bối cảnh (VD: sinh viên năm X, intern PM, ...): intern AI Engineer
+- Công việc hằng tuần (3-5 gạch đầu dòng để soi problem): Tổng hợp weekly report, Viết dailystandup mỗi ngày, Tra cứu tài liệu, tìm hiểu thuật ngữ công ty.
 
 ---
 
@@ -17,11 +17,11 @@
 
 | # | Lăng kính (Lặp lại / Tốn thời gian / AI có thể tốt hơn / Pain từ người khác) | Problem quan sát được | Ai chịu ảnh hưởng? | Dấu hiệu thật (số + bằng chứng) |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+| 1 |Mất thời gian |Người mới mất thời gian tìm tài liệu và hiểu thuật ngữ nội bộ |Intern, Nhân viên mới, Mentor |2 tiếng/ngày |
+| 2 |Pain từ người khác |Mentor khó theo dõi tiến độ của Intern |Mentor, Intern |3 lần meeting/tuần |
+| 3 |Tốn thời gian |Chuẩn bị weekly report mỗi tuần |Intern |1 lần/tuần |
+| 4 |Lặp lại |Viết standup update mỗi ngày |Intern |1 lần/ngày |
+| 5 |Tốn thời gian |Viết meeting notes sau mỗi buổi họp |Intern |30 phút/buổi |
 | 6 | | | | |
 | 7 | | | | |
 | 8 | | | | |
@@ -50,44 +50,43 @@ Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottlenec
 
 | Rank | Problem (copy từ bảng scan) | Vì sao chọn (2-3 ý) | Điều còn chưa chắc |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 |Người mới mất thời gian tìm tài liệu và hiểu thuật ngữ nội bộ |Giúp người mới onboarding nhanh hơn, giảm các câu hỏi lặp lại cho mentor. Tài liệu nội bộ chính xác, có nguồn, giải thích thuật ngữ cụ thể |Người mới, intern có thực sự muốn hỏi AI hay không. Tính bảo mật của dữ liệu nội bộ công ty |
+| 2 |Mentor khó theo dõi tiền độ của Intern |Mentor sẽ thấy rõ tiến độ của intern, có thể hỗ trợ mà không cần hỏi thủ công mỗi ngày |Mentor thực sự thiếu thông tin hay thiếu thời gian đọc. Những đánh giá này có thực sự là đánh giá công tâm |
+| 3 |Chuẩn bị weekly report |Xuất hiện đều đặn, lặp đi lặp lại, người mới khó làm quen |Mentor có thật sự cần một format chung cho các thành viên intern không |
 
-### 2.2. Problem Cards chi tiết (lặp lại cho cả 3 cards)
+### 2.2. Problem Cards chi tiết
 
 ---
 
-#### Problem Card #1 — [Tên problem]
+#### Problem Card #1 — Tìm tài liệu và thuật ngữ nội bộ
 
 ```text
-Problem 1 câu:
+Problem 1 câu: Người mới mất nhiều thời gian tìm đúng tài liệu và hiểu thuật ngữ nội bộ.
 
-Actor:
+Actor: Intern, nhân viên mới và mentor.
 
-Thời điểm / bối cảnh:
+Thời điểm / bối cảnh: Khi bắt đầu một task mới hoặc gặp thuật ngữ chưa biết.
 
 Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+1. Đọc yêu cầu công việc.
+2. Tìm tài liệu trong các thư mục hoặc chat.
+3. Hỏi mentor khi chưa hiểu thuật ngữ.
+4. Đọc lại tài liệu và thực hiện task.
 
-Bottleneck:
+Bottleneck: Tài liệu phân tán, khó biết tài liệu nào là đúng và mới nhất.
 
-Impact:
+Impact: Người mới mất khoảng 2 giờ/ngày; mentor phải trả lời các câu hỏi lặp lại.
 
-Success metric:
+Success metric: Giảm thời gian tìm hiểu xuống dưới 1 giờ/ngày và giảm số câu hỏi lặp lại cho mentor.
 
-Non-AI alternative:
+Non-AI alternative: Gom tài liệu vào một nơi và làm danh mục thuật ngữ chung.
 
-AI hypothesis:
+AI hypothesis: AI tìm kiếm theo ngữ nghĩa, trả lời ngắn gọn và dẫn link tới tài liệu nguồn.
 
 Quick gut:
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
 ```
@@ -95,51 +94,48 @@ Quick gut:
 **Draft workflow Card #1** (ASCII / Mermaid / ảnh đính kèm):
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — khoảng 120 phút
 
-[1 ...: __'] → [2 ...: __'] → [3 ...: __'] → [4 ...: __']  <-- bottleneck
+[Đọc task: 10'] → [Tìm tài liệu: 60'] → [Hỏi mentor: 20'] → [Hiểu và làm task: 30']  <-- bottleneck
 
-FUTURE STATE — ___ phút
+FUTURE STATE — khoảng 60 phút
 
-[1 ...: __'] → [2 ...: __'] → [3 ... review: __']  <-- human boundary
+[Đọc task: 10'] → [Hỏi AI và xem nguồn: 20'] → [Tự kiểm tra/mentor review: 30']  <-- human boundary
 
-Fallback: nếu AI sai thì ...
+Fallback: Nếu AI không chắc hoặc không có nguồn, hỏi mentor và cập nhật tài liệu chung.
 ```
-
-File đính kèm (nếu vẽ riêng): `01-individual-problem-scan-workflow-card-1.png`
 
 ---
 
-#### Problem Card #2 — [Tên problem]
+#### Problem Card #2 — Mentor khó theo dõi tiến độ intern
 
 ```text
-Problem 1 câu:
+Problem 1 câu: Mentor khó nắm được intern đang làm gì và đang vướng ở đâu.
 
-Actor:
+Actor: Mentor và intern.
 
-Thời điểm / bối cảnh:
+Thời điểm / bối cảnh: Trong các buổi meeting, khoảng 3 lần/tuần.
 
 Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+1. Intern tự ghi lại việc đã làm.
+2. Đến meeting, intern báo cáo miệng.
+3. Mentor hỏi thêm về tiến độ và khó khăn.
+4. Hai bên thống nhất việc tiếp theo.
 
-Bottleneck:
+Bottleneck: Thông tin không được cập nhật liên tục, mentor phải hỏi lại từ đầu.
 
-Impact:
+Impact: Meeting dài hơn và mentor khó hỗ trợ đúng lúc.
 
-Success metric:
+Success metric: Mentor xem được tiến độ trước meeting; giảm thời gian hỏi cập nhật trong meeting.
 
-Non-AI alternative:
+Non-AI alternative: Dùng bảng Kanban chung, cập nhật trạng thái task mỗi ngày.
 
-AI hypothesis:
+AI hypothesis: AI tóm tắt daily standup thành tiến độ, việc đang làm và blocker cho mentor xem.
 
 Quick gut:
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
 ```
@@ -147,51 +143,48 @@ Quick gut:
 **Draft workflow Card #2:**
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — mỗi buổi meeting
 
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
+[Intern nhớ lại việc đã làm] → [Báo cáo miệng] → [Mentor hỏi thêm]  <-- bottleneck
 
-FUTURE STATE — ___ phút
+FUTURE STATE
 
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
+[Intern cập nhật ngắn mỗi ngày] → [AI tóm tắt] → [Mentor xem và trao đổi blocker]  <-- human boundary
 
-Fallback: ...
+Fallback: Nếu tóm tắt thiếu, mentor xem bản standup gốc và hỏi trực tiếp intern.
 ```
-
-File đính kèm: `01-individual-problem-scan-workflow-card-2.png`
 
 ---
 
-#### Problem Card #3 — [Tên problem]
+#### Problem Card #3 — Chuẩn bị weekly report
 
 ```text
-Problem 1 câu:
+Problem 1 câu: Intern mất thời gian tổng hợp công việc trong tuần để viết weekly report.
 
-Actor:
+Actor: Intern và mentor.
 
-Thời điểm / bối cảnh:
+Thời điểm / bối cảnh: Cuối mỗi tuần.
 
 Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
+1. Xem lại daily standup, task và meeting notes.
+2. Chọn các việc quan trọng.
+3. Viết kết quả, khó khăn và kế hoạch tuần sau.
+4. Chỉnh sửa theo format rồi gửi mentor.
 
-Bottleneck:
+Bottleneck: Phải đọc lại thông tin ở nhiều nơi và tự sắp xếp thành báo cáo.
 
-Impact:
+Impact: Mỗi tuần đều lặp lại, làm chậm thời gian hoàn thành báo cáo.
 
-Success metric:
+Success metric: Hoàn thành bản nháp trong 15 phút và ít phải sửa format.
 
-Non-AI alternative:
+Non-AI alternative: Dùng mẫu weekly report cố định, cập nhật dần trong tuần.
 
-AI hypothesis:
+AI hypothesis: AI tổng hợp daily standup và task thành bản nháp theo mẫu; intern kiểm tra trước khi gửi.
 
 Quick gut:
 [ ] No AI / process fix
 [ ] Rule
-[ ] Workflow
+[x] Workflow
 [ ] Agent
 [ ] Chưa biết
 ```
@@ -199,18 +192,16 @@ Quick gut:
 **Draft workflow Card #3:**
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT STATE — khoảng 30 phút
 
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
+[Xem lại nhiều nguồn: 15'] → [Tổng hợp nội dung: 10'] → [Chỉnh format: 5']  <-- bottleneck
 
-FUTURE STATE — ___ phút
+FUTURE STATE — khoảng 15 phút
 
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
+[Đưa daily standup/task vào AI: 5'] → [AI tạo bản nháp: 2'] → [Intern kiểm tra và sửa: 8']  <-- human boundary
 
-Fallback: ...
+Fallback: Nếu bản nháp sai, dùng mẫu report cố định và tự chỉnh từ thông tin gốc.
 ```
-
-File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
 
 ---
 
@@ -219,24 +210,27 @@ File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
 **Card tôi muốn pitch nhất:**
 
 ```text
-
+Problem Card #1 — Tìm tài liệu và thuật ngữ nội bộ.
 ```
 
 **Vì sao (2-3 câu: workflow gì, số đo gì, impact gì):**
 
 ```text
-
+Người mới hiện mất khoảng 2 giờ/ngày để tìm tài liệu và hiểu thuật ngữ nội bộ.
+Giải pháp là một AI tìm kiếm có nguồn, giúp trả lời nhanh nhưng vẫn để người dùng kiểm tra tài liệu gốc.
+Việc này giúp onboarding nhanh hơn và giảm câu hỏi lặp lại cho mentor.
 ```
 
 **Câu hỏi tôi muốn nhóm challenge (1-2 câu hỏi đúng chỗ yếu):**
 
 ```text
-
+Làm sao đảm bảo AI chỉ dùng tài liệu được phép và không trả lời sai về thông tin nội bộ?
+Nếu tài liệu chưa đầy đủ hoặc đã cũ thì ai sẽ chịu trách nhiệm cập nhật?
 ```
 
 **AI phản biện Card (nếu có):**
-- Điểm yếu AI chỉ ra:
-- Tôi sửa gì:
+- Điểm yếu AI chỉ ra: Dữ liệu nội bộ có thể cũ, thiếu hoặc cần bảo mật.
+- Tôi sửa gì: Chỉ dùng tài liệu đã được duyệt, luôn hiển thị nguồn và có mentor kiểm tra khi cần.
 
 ### Self-check nộp phần 01
 - [ ] Có 5+ problems + top 3 Cards đủ field
